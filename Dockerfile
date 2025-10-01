@@ -20,10 +20,10 @@ RUN conda install -c aihabitat -c conda-forge habitat-sim=0.1.7 headless -y
 
 RUN conda init
 
-RUN git clone --branch 0.1.7 https://githubfast.com/xmlnudt/habitat-lab.git && \
+RUN git clone --branch 0.1.7 https://github.com/xmlnudt/habitat-lab.git && \
     cd habitat-lab && \
     git remote set-url origin https://github.com/xmlnudt/habitat-lab.git
-RUN git clone https://githubfast.com/xmlnudt/VLN-CE.git && \
+RUN git clone https://github.com/xmlnudt/VLN-CE.git && \
     cd VLN-CE && \
     git remote set-url origin https://github.com/xmlnudt/VLN-CE.git
 
