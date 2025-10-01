@@ -41,9 +41,9 @@ RUN cd habitat-lab && python setup.py develop --all
 RUN cd VLN-CE && \
     python -m pip install -r requirements.txt
 
-RUN apt-get update && apt-get install -y libgl1-mesa-dev
-RUN apt-get update && apt-get install -y xvfb
-RUN apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libgl1-mesa-dev
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y xvfb
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1
 RUN pip uninstall lmdb -y && pip install lmdb
 
 WORKDIR /root/VLN-CE
