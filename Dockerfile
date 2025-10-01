@@ -51,3 +51,4 @@ WORKDIR /root/VLN-CE
 # docker run --rm -it --gpus all -v ./data:/root/VLN-CE/data test bash
 # xvfb-run python run.py --exp-config vlnce_baselines/config/r2r_baselines/nonlearning.yaml --run-type eval
 # xvfb-run python run.py --exp-config vlnce_baselines/config/r2r_baselines/seq2seq.yaml --run-type train
+
